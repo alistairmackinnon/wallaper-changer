@@ -9,7 +9,7 @@ img_base_url = 'https://apod.nasa.gov/'
 
 # get and parse files
 resp = requests.get(url)
-html = BeautifulSoup(resp.text, featulsres="html.parser")
+html = BeautifulSoup(resp.text, features="html.parser")
 img = html.find('img')
 img = img['src']
 img_link = os.path.join(img_base_url, img)
